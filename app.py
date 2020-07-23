@@ -48,12 +48,16 @@ def analayse():
         '''isthisFile.save("test/" + isthisFile.filename)
         data_list=getocr("test/" + isthisFile.filename)'''
         data='Hello world '
-        '''for i in data_list:
-            data+=i'''
+        for i in data_list:
+            data+=i
         mp={'data':data,'sentiment':'positive'}
         return jsonify(mp)
 
 
+def getocr(fn):
+    ans = ocr_image(fn, service='youdao')
+    print(ans)
+    return ans
 
 
 

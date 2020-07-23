@@ -68,7 +68,7 @@ def predict(data):
     data=data.strip()
     if(data=='' or data==' '):
         return 'Random'
-     if(pred[0]==0):
+    if(pred[0]==0):
         return 'Negative'
     elif(pred[0]==1):
         return 'Positive'

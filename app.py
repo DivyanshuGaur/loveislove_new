@@ -23,7 +23,7 @@ CORS(app)
 
 
 
-
+data_list=[]
 
 ext_data=[]
 REPLACE_NO_SPACE = re.compile("[.;:!\'?,\"()\[\]]")

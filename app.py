@@ -63,7 +63,7 @@ def getocr(fn):
 
 	
 def predict(data):
-	data=data.strip()
+    data=data.strip()
     if(data=='' or data==' '):
         return 'Random'
 

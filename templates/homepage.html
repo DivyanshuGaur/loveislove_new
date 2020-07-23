@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
        <script  src="https://code.jquery.com/jquery-3.4.1.js"></script>
        <script>
 
               $(function() {
             $('#upload-file-btn').click(function() {
-                    alert('Click');
+                    alert('OK to continue');
                     var form_data = new FormData($('#upload-file')[0]);
                     $.ajax({
                         type: 'POST',
@@ -75,7 +77,9 @@
 
         <a href= "https://www.github.com/DivyanshuGaur"><img src="https://image.flaticon.com/icons/svg/25/25231.svg" width="30" height="30" title="git" alt="hub"></a>
 
-        &nbsp; &nbsp;<a href="https://www.linkedin.com/in/divyanshu-gaur-a52138174/"><img src="https://img.icons8.com/color/2x/linkedin.png" width="30" height="30" title="linked" alt="in"></a>
+        &nbsp<a href="https://www.linkedin.com/in/divyanshu-gaur-a52138174/"><img src="https://img.icons8.com/color/2x/linkedin.png" width="30" height="30" title="linked" alt="in"></a>
+        &nbsp<a href="https://www.hackerearth.com/challenges/competitive/hackerearth-machine-learning-challenge-pride-month-edition/">Problem Statement</a>
+
 
     </nav>
       <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">

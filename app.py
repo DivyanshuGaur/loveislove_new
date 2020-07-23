@@ -50,7 +50,7 @@ def analayse():
         data=''
         for i in data_list:
             data=data+i+' '
-        sentiment='positive'
+        sentiment=predict(data)
         mp={'data':data,'sentiment':sentiment}
         return jsonify(mp)
 
@@ -60,11 +60,10 @@ def getocr(fn):
     print(ans)
     return ans
 
-<<<<<<< HEAD
 
 	
 def predict(data):
-	data=data.strip()
+    data=data.strip()
     if(data=='' or data==' '):
         return 'Random'
 
@@ -84,12 +83,7 @@ def predict(data):
     elif(pred[0]==1):
         return 'Positive'
 
-=======
-def predict(data):
-    data=[data]
-    v=vectorizer.transform(data)
-    pred=classifier
->>>>>>> 4d36f2bddfb6270fa3e84b763877d801f463dc14
+
 
 
 

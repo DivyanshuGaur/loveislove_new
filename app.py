@@ -30,9 +30,9 @@ ext_data=[]
 REPLACE_NO_SPACE = re.compile("[.;:!\'?,\"()\[\]]")
 REPLACE_WITH_SPACE = re.compile("(<br\s*/><br\s*/>)|(\-)|(\/)")
 
-'''classifier=joblib.load('Models/LogReg.pickle')
-vectorizer=joblib.load('Models/Vectorizer.pickle')
-'''
+classifier=joblib.load('Models1/LogReg.pickle')
+vectorizer=joblib.load('Models1/Vectorizer.pickle')
+
 
 @app.route("/")
 def index():

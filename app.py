@@ -20,8 +20,7 @@ app=Flask(__name__)
 
 CORS(app)
 
-classifier=joblib.load('Models/LogReg.pickle')
-vectorizer=joblib.load('Models/Vectorizer.pickle')
+
 
 
 data_list=[]

@@ -60,7 +60,10 @@ def getocr(fn):
     print(ans)
     return ans
 
-
+def predict(data):
+    data=[data]
+    v=vectorizer.transform(data)
+    pred=classifier
 
 
 

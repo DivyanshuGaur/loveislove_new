@@ -63,7 +63,8 @@ def getocr(fn):
 
 
 def predict(data):
-    vectors=vectorizer.transform(ext_data)
+    return 'posituve'
+    '''vectors=vectorizer.transform(ext_data)
     pred=classifier.predict(vectors)
     data=data.strip()
     if(data=='' or data==' '):
@@ -71,7 +72,7 @@ def predict(data):
     if(pred[0]==0):
         return 'Negative'
     elif(pred[0]==1):
-        return 'Positive'
+        return 'Positive''''
 
 
 

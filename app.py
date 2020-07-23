@@ -20,7 +20,8 @@ app=Flask(__name__)
 
 CORS(app)
 
-
+classifier=joblib.load('Models/LogReg.pickle')
+vectorizer=joblib.load('Models/Vectorizer.pickle')
 
 
 data_list=[]
@@ -50,7 +51,8 @@ def analayse():
         data=''
         for i in data_list:
             data+=i
-        mp={'data':data,'sentiment':'positive'}
+        sentiment=predict(data)
+        mp={'data':data,'sentiment':sentiment}
         return jsonify(mp)
 
 
@@ -59,6 +61,17 @@ def getocr(fn):
     print(ans)
     return ans
 
+
+def predict(data):
+    vectors=vectorizer.transform(ext_data)
+    pred=classifier.predict(vectors)
+    data=data.strip()
+    if(data=='' or data==' '):
+        return 'Random'
+     if(pred[0]==0):
+        return 'Negative'
+    elif(pred[0]==1):
+        return 'Positive'
 
 
 

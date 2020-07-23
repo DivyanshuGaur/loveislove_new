@@ -50,7 +50,7 @@ def analayse():
         data=''
         for i in data_list:
             data=data+i+' '
-        sentiment='positive'
+        sentiment=predict(data)
         mp={'data':data,'sentiment':sentiment}
         return jsonify(mp)
 

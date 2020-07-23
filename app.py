@@ -23,7 +23,6 @@ CORS(app)
 
 
 
-lemmantizer=WordNetLemmatizer()
 
 
 ext_data=[]

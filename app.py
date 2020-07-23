@@ -29,7 +29,7 @@ ext_data=[]
 REPLACE_NO_SPACE = re.compile("[.;:!\'?,\"()\[\]]")
 REPLACE_WITH_SPACE = re.compile("(<br\s*/><br\s*/>)|(\-)|(\/)")
 
-classifier=joblib.load('Models1/LogReg.pickle')
+classifier=joblib.load('Models1/Sentiment-Model.pkl')
 vectorizer=joblib.load('Models1/Vectorizer.pickle')
 
 

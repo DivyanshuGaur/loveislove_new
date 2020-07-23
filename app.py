@@ -51,7 +51,7 @@ def analayse():
         data=''
         for i in data_list:
             data+=i
-        sentiment=predict(data)
+        sentiment='positive'
         mp={'data':data,'sentiment':sentiment}
         return jsonify(mp)
 
@@ -60,19 +60,6 @@ def getocr(fn):
     ans = ocr_image(fn, service='youdao')
     print(ans)
     return ans
-
-
-def predict(data):
-    return 'posituve'
-    '''vectors=vectorizer.transform(ext_data)
-    pred=classifier.predict(vectors)
-    data=data.strip()
-    if(data=='' or data==' '):
-        return 'Random'
-    if(pred[0]==0):
-        return 'Negative'
-    elif(pred[0]==1):
-        return 'Positive''''
 
 
 

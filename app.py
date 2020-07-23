@@ -60,7 +60,6 @@ def getocr(fn):
     print(ans)
     return ans
 
-<<<<<<< HEAD
 
 	
 def predict(data):
@@ -84,12 +83,7 @@ def predict(data):
     elif(pred[0]==1):
         return 'Positive'
 
-=======
-def predict(data):
-    data=[data]
-    v=vectorizer.transform(data)
-    pred=classifier
->>>>>>> 4d36f2bddfb6270fa3e84b763877d801f463dc14
+
 
 
 

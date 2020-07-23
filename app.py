@@ -50,7 +50,7 @@ def analayse():
         data_list=getocr(isthisFile.filename)
         data=''
         for i in data_list:
-            data+=i
+            data=data+i+' '
         sentiment='positive'
         mp={'data':data,'sentiment':sentiment}
         return jsonify(mp)
@@ -61,6 +61,28 @@ def getocr(fn):
     print(ans)
     return ans
 
+
+	
+def predict(data):
+	data=data.strip()
+    if(data=='' or data==' '):
+        return 'Random'
+
+    msg = re.sub('[^a-zA-Z]', ' ', data)
+    msg = msg.lower()
+    msg = msg.split()
+    msg = ' '.join(msg)
+    ext_data.append(msg)
+
+    vectors=vectorizer.transform(ext_data)
+    pred=classifier.predict(vectors)
+
+    print(pred[0])
+
+    if(pred[0]==0):
+        return 'Negative'
+    elif(pred[0]==1):
+        return 'Positive'
 
 
 

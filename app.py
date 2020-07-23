@@ -45,9 +45,9 @@ def analayse():
     if (request.method == 'POST'):
         isthisFile = request.files.get('file')
         print(isthisFile.filename)
-        '''isthisFile.save("test/" + isthisFile.filename)
-        data_list=getocr("test/" + isthisFile.filename)'''
-        data='Hello world '
+        isthisFile.save("test/" + isthisFile.filename)
+        data_list=getocr("test/" + isthisFile.filename)
+        data=''
         for i in data_list:
             data+=i
         mp={'data':data,'sentiment':'positive'}

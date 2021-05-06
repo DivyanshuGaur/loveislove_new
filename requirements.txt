@@ -7,7 +7,7 @@ Werkzeug==0.15.5
 numpy>=1.9.2
 scikit-learn==0.22.2.post1
 pandas>=0.19
-FLASK-CORS == 3.0.8
+FLASK-CORS == 3.0.9
 nltk>=3.4.5
 JOBLIB==0.15.0
 easy-ocr==0.1

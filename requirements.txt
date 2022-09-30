@@ -9,5 +9,5 @@ scikit-learn==0.22.2.post1
 pandas>=0.19
 FLASK-CORS == 3.0.8
 nltk>=3.4.5
-JOBLIB==0.15.0
+JOBLIB==1.2.0
 easy-ocr==0.1
